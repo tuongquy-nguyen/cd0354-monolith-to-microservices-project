@@ -1,5 +1,5 @@
 ### Build
-FROM beevelop/ionic:v2023.10.1 AS ionic
+FROM node:12 AS ionic
 ## Create app directory
 WORKDIR /usr/src/app
 ## Install app dependencies
@@ -8,7 +8,7 @@ COPY package*.json ./
 RUN npm ci
 ## Bundle app source
 COPY . .
-RUN ionic build
+RUN npm run build
 ### Run 
 FROM nginx:alpine
 #COPY www /usr/share/nginx/html

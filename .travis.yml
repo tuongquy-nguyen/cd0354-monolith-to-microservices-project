@@ -7,7 +7,7 @@ services:
 # we want our travis run on only master branch
 branches:
   only:
-    - master
+    - main
 
 # Pre-testing installs
 install:

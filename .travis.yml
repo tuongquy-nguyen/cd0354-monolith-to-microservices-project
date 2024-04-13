@@ -26,16 +26,16 @@ script:
   - docker build -t reverseproxy ./udagram-reverseproxy
 
   # Tag
-  - docker tag udagram-api-feed callmeket/udagram-api-feed:v2
-  - docker tag udagram-api-user callmeket/udagram-api-user:v2
-  - docker tag udagram-frontend callmeket/udagram-frontend:v2
-  - docker tag reverseproxy callmeket/reverseproxy:v2
+  - docker tag udagram-api-feed callmeket/udagram-api-feed:v3
+  - docker tag udagram-api-user callmeket/udagram-api-user:v3
+  - docker tag udagram-frontend callmeket/udagram-frontend:v3
+  - docker tag reverseproxy callmeket/reverseproxy:v3
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push callmeket/udagram-api-feed:v2
-  - docker push callmeket/udagram-api-user:v2
-  - docker push callmeket/udagram-frontend:v2
-  - docker push callmeket/reverseproxy:v2
+  - docker push callmeket/udagram-api-feed:v3
+  - docker push callmeket/udagram-api-user:v3
+  - docker push callmeket/udagram-frontend:v3
+  - docker push callmeket/reverseproxy:v3
   - echo "Completed!"
 

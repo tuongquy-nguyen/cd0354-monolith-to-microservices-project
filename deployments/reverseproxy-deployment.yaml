@@ -5,7 +5,9 @@ metadata:
     service: reverseproxy
   name: reverseproxy
 spec:
-  replicas: 2
+  progressDeadlineSeconds: 2147483647
+  replicas: 1
+  revisionHistoryLimit: 2147483647
   selector:
     matchLabels:
       service: reverseproxy
@@ -15,7 +17,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: callmeket/reverseproxy:v1
+      - image: callmeket/reverseproxy:v3
         name: reverseproxy
         imagePullPolicy: Always
         ports:

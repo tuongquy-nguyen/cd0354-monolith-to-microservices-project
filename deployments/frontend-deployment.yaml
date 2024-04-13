@@ -16,7 +16,7 @@ spec:
         api: external
     spec:
       containers:
-      - image: callmeket/udagram-frontend:v1
+      - image: callmeket/udagram-frontend:v3
         name: frontend
         imagePullPolicy: Always
         ports:

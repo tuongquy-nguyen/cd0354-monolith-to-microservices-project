@@ -18,7 +18,7 @@ spec:
       - image: callmeket/udagram-api-user:v1
         name: backend-user
         imagePullPolicy: Always
-        resource:
+        resources:
           requests:
             cpu: "150m"
           limits:

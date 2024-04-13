@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 13
+  - 18
 services:
   - docker
 
@@ -11,6 +11,7 @@ branches:
 
 # Pre-testing installs
 install:
+  - npm install -g npm@10.5.2
   - echo "nothing needs to be installed"
 
 # Scripts to be run such as tests

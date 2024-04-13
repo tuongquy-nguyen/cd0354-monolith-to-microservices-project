@@ -1,7 +1,7 @@
 dist: focal
 language: node_js
 node_js:
-  - 18
+  - 20
 services:
   - docker
 
@@ -11,6 +11,7 @@ branches:
     - main
 
 before_install:
+  - npm install -g npm@10.5.2
 
 # Pre-testing installs
 install:

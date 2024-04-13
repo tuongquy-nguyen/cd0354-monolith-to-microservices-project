@@ -1,7 +1,6 @@
-dist: focal
 language: node_js
 node_js:
-  - 20
+  - 13
 services:
   - docker
 
@@ -10,11 +9,8 @@ branches:
   only:
     - main
 
-before_install:
-
 # Pre-testing installs
 install:
-  - npm install -g npm@10.5.2
   - echo "nothing needs to be installed"
 
 # Scripts to be run such as tests

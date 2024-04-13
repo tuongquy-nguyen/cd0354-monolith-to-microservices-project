@@ -18,6 +18,11 @@ spec:
       - image: callmeket/udagram-api-feed:v1
         name: backend-feed
         imagePullPolicy: Always
+        resource:
+          requests:
+            cpu: "150m"
+          limits:
+            cpu: "500m"
         env:
         - name: URL
           valueFrom:
